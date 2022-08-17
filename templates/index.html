@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF_8">
+        <title>Situation atmosphérique</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <script src="{{url_for('static', filename='js/script.js')}}"></script>
+    </head>
+    <body>
+        {% for row in atmosphere %}
+        <h1>{{ row['temperature'] }}</h1>
+        {% endfor %}
+    </body>
+</html>
