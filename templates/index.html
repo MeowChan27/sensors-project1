@@ -7,8 +7,22 @@
         <script src="{{url_for('static', filename='js/script.js')}}"></script>
     </head>
     <body>
-        {% for row in atmosphere %}
-        <h1>{{ row['temperature'] }}</h1>
-        {% endfor %}
+        
+        <table>
+            <tr>
+                <td>Heure</td>
+                <td>Température</td>
+                <td>Humidité</td>
+                <td>Pression</td>
+            </tr>
+            {% for row in atmosphere %}
+            <tr>
+                <td>{{ row['tim'] }}</td>
+                <td>{{ row['temperature'] }}</td>
+                <td>{{ row['humidite'] }}</td>
+                <td>{{ row['pression'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </body>
 </html>
