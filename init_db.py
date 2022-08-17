@@ -8,10 +8,10 @@ with open('schema.sql') as f:
 
 cur = connection.cursor()
 
-cur.execute("INSERT INTO atmosphere (time, temperature, humidite, pression) VALUES (?, ?, ?, ?)",
+cur.execute("INSERT INTO atmosphere (tim, temperature, humidite, pression) VALUES (?, ?, ?, ?)",
             ('10h00', 15, '40%', 1.3)
             )
-cur.execute("INSERT INTO atmosphere (time, temperature,humidite,pression) VALUES (?, ?, ?,?)",
+cur.execute("INSERT INTO atmosphere (tim, temperature,humidite,pression) VALUES (?, ?, ?,?)",
             ('10h20', 16, '50%', 1.4)
             )
 
